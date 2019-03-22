@@ -1,0 +1,458 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include <mmsystem>
+#pragma hdrstop
+
+#include "Unit6.h"
+#include "Unit1.h"
+#include "Unit7.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm6 *Form6;
+
+int i=1;
+void zk(int i)
+{
+
+                Form6->Image1->Picture->LoadFromFile("image/"+IntToStr(i)+".bmp");
+                Form6->Image2->Picture->LoadFromFile("image/"+IntToStr(i+1)+".bmp");
+                Form6->Image3->Picture->LoadFromFile("image/"+IntToStr(i+2)+".bmp");
+                Form6->Image4->Picture->LoadFromFile("image/"+IntToStr(i+3)+".bmp");
+                Form6->Image5->Picture->LoadFromFile("image/"+IntToStr(i+4)+".bmp");
+
+}
+
+void lb(int i)
+{
+        if ( i==1 )
+        {
+                Form6->Label1->Caption="Bag   -    Портфель";
+                Form6->Label2->Caption="Black   -   Чорний";
+                Form6->Label3->Caption="Book   -   Книга";
+                Form6->Label4->Caption="Boot   -   Ботинок";
+                Form6->Label5->Caption="Box   -   Коробка";
+        }
+        else
+        if ( i==2 )
+        {
+                Form6->Label1->Caption="Fox   -    Лис";
+                Form6->Label2->Caption="Left   -   Вліворуч";
+                Form6->Label3->Caption="Pen   -   Ручка";
+                Form6->Label4->Caption="Pencil   -   Олівць";
+                Form6->Label5->Caption="Clock - годинник";
+        }
+        else
+        if ( i==3 )
+        {
+               Form6->Label1->Caption="Bus   -   Автобус";
+               Form6->Label2->Caption="Flag   -    Прапор";
+               Form6->Label3->Caption="Run   -   Бігти";
+               Form6->Label4->Caption="Rat   -   Криса";
+               Form6->Label5->Caption="Squirrel   -   Білка";
+
+        }
+         else
+        if ( i==4 )
+        {
+               Form6->Label1->Caption="Window   -   Вікно";
+               Form6->Label2->Caption="Rabbit   -    Кролик";
+               Form6->Label3->Caption="Room   -   Кімната";
+               Form6->Label4->Caption="Sit   -   Сидіти";
+               Form6->Label5->Caption="Spoon   -   Ложка";
+
+        }
+
+}
+
+void lb1(int i)
+{
+        if ( i==1 )
+        {
+                Form6->Label1->Caption="Clap   -    Оплески";
+                Form6->Label2->Caption="Dance   -   Танець";
+                Form6->Label3->Caption="Cup   -   Чашка";
+                Form6->Label4->Caption="Desk   -   Стіл";
+                Form6->Label5->Caption="Diary   -   Щоденник";
+        }
+        else
+        if ( i==2 )
+        {
+                Form6->Label1->Caption="Dress   -    Сукня";
+                Form6->Label2->Caption="Fat   -   Повний";
+                Form6->Label3->Caption="Jam   -   Варення";
+                Form6->Label4->Caption="Kitten - Кошеня";
+                Form6->Label5->Caption="Mat   -   Килим";
+        }
+        else
+        if ( i==3 )
+        {
+               Form6->Label1->Caption="Not   -    Ні";
+               Form6->Label2->Caption="Red   -   Червоний";
+               Form6->Label3->Caption="Shelf   -   Полиця";
+               Form6->Label4->Caption="Shop   -   Магазин";
+               Form6->Label5->Caption="Sing   -   Співати";
+
+        }
+         else
+        if ( i==4 )
+        {
+               Form6->Label1->Caption="Six   -    Шість";
+               Form6->Label2->Caption="Stick   -   Палиця";
+               Form6->Label3->Caption="Text   -   Текст";
+               Form6->Label4->Caption="We   -   Ми";
+               Form6->Label5->Caption="Zoo   -   Зоопарк";
+
+        }
+
+}
+//---------------------------------------------------------------------------
+__fastcall TForm6::TForm6(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn3Click(TObject *Sender)
+{
+        if (RadioButton1->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/1.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/6.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/11.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/16.wav",0,SND_ASYNC);
+        }
+        else
+        if (RadioButton2->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/21.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/26.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/31.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/36.wav",0,SND_ASYNC);
+        }        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn5Click(TObject *Sender)
+{
+        if (RadioButton1->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/2.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/7.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/12.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/17.wav",0,SND_ASYNC);
+        }
+        else
+        if (RadioButton2->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/23.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/27.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/32.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/37.wav",0,SND_ASYNC);
+        }        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn6Click(TObject *Sender)
+{
+        if (RadioButton1->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/3.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/8.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/13.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/18.wav",0,SND_ASYNC);
+        }
+        if (RadioButton2->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/22.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/28.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/33.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/38.wav",0,SND_ASYNC);
+        }        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn7Click(TObject *Sender)
+{
+        if (RadioButton1->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/4.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/9.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/14.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/19.wav",0,SND_ASYNC);
+        }
+        if (RadioButton2->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/24.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/29.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/34.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/39.wav",0,SND_ASYNC);
+        }        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn8Click(TObject *Sender)
+{
+        if (RadioButton1->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/5.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/10.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/15.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/20.wav",0,SND_ASYNC);
+        }
+        if (RadioButton2->Checked)
+        {
+                if (i==1)
+                PlaySound("voice/25.wav",0,SND_ASYNC);
+                else
+                if (i==2)
+                PlaySound("voice/30.wav",0,SND_ASYNC);
+                else
+                if (i==3)
+                PlaySound("voice/35.wav",0,SND_ASYNC);
+                else
+                if (i==4)
+                PlaySound("voice/40.wav",0,SND_ASYNC);
+        }        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::RadioButton1Click(TObject *Sender)
+{
+        i=1;
+        zk(i);
+        lb(i);        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::RadioButton2Click(TObject *Sender)
+{
+        i=1;
+        zk(i+20);
+        lb1(i);        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn2Click(TObject *Sender)
+{
+        ++i;
+        if (i>4)
+        {
+                 i=4;
+        }
+       switch(i)
+       {
+                case 1 :
+                {
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i);
+                                lb(i);
+                        }
+                        else
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+20);
+                                lb1(i);
+                        }
+                };break;
+                case 2 :
+                {
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i+4);
+                                lb(i);
+                        }
+                        else
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+24);
+                                lb1(i);
+                        }
+
+                };break;
+                case 3:
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i+8);
+                                lb(i);
+                        }
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+28);
+                                lb1(i);
+                        }
+                break;
+                case 4:
+                        {
+                                if (Form6->RadioButton1->Checked)
+                                {
+                                        zk(i+12);
+                                        lb(i);
+                                }
+                                if (Form6->RadioButton2->Checked)
+                                {
+                                        zk(i+32);
+                                        lb1(i);
+                                }
+                        }
+                break;
+
+
+       }
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn1Click(TObject *Sender)
+{
+        --i;
+        if (i<1) i=1;
+        switch(i)
+       {
+                case 1 :
+                {
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i);
+                                lb(i);
+                        }
+                        else
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+20);
+                                lb1(i);
+                        }
+                };break;
+                case 2 :
+                {
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i+4);
+                                lb(i);
+                        }
+                        else
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+24);
+                                lb1(i);
+                        }
+
+                };break;
+                case 3:
+                {
+                        if (Form6->RadioButton1->Checked)
+                        {
+                                zk(i+8);
+                                lb(i);
+                        }
+                        if (Form6->RadioButton2->Checked)
+                        {
+                                zk(i+28);
+                                lb1(i);
+                        }
+                }
+                break;
+                case 4:
+                        {
+                                if (Form6->RadioButton1->Checked)
+                                {
+                                        zk(i+12);
+                                        lb(i);
+                                }
+                                if (Form6->RadioButton2->Checked)
+                                {
+                                        zk(i+32);
+                                        lb1(i);
+                                }
+                        }
+                break;
+
+
+       }
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn4Click(TObject *Sender)
+{
+        Form6->Hide();
+        Form1->Show();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::BitBtn9Click(TObject *Sender)
+{
+        Form7->Show();
+        Form6->Hide();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm6::FormActivate(TObject *Sender)
+{
+        if(RadioButton1->Checked)
+        {
+                zk(i);
+                lb(i);
+        }
+        else
+        if (RadioButton2->Checked)
+        {
+                zk(i+20);
+                lb1(i);
+        }
+}
+//---------------------------------------------------------------------------
+
